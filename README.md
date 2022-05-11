@@ -6,11 +6,14 @@ The dataset contains tweets about vaccines that are labeled 0 for neutral, 1 for
 
 ## Overview of the NLP models
 ### Logistic Regression (Softmax Regression)
+I used the scikit-learn LogisticRegression function with multi class = ’multinomial’.
 * Preprocessing: None, Lematizing, Stemming
 * Feature Extraction with vectorizers: Bag Of Words, TF-IDF, Hashing Vectorizer
 * LogisticRegression: I tried to various values for some hyperparameters by hand and I found that probably the best parameters are solver=saga, C=1.0 and l2 or l1 for penalty. A grid search confirmed that.
 
 ### Feed Forward Neural Networks
+I used pytorch nn.Module. I experimented with:
+* Different optimizers (SGD with momentum and nesterov, Adam (with amsgrad) and their learning rate
 * Loss Function: CrossEntropyLoss
 * Activation Functions: ReLU, ELU, SELU, tanh, LeakyReLU
 * Batch Normalization
