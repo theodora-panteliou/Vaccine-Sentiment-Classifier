@@ -38,4 +38,17 @@ For Hyperparameter Tuning I experimented with the following parameters:
 * Attention Mechanism
 
 ### BERT (Bidirectional Encoder Representations for Transformers)
-I used the pretrained BERT-base-uncased and fine tuned it for our classification problem.
+I used the pretrained BERT-base-uncased and fine tuned it for our classification problem. For hyperparameter tuning I tried mainly the ones that are suggested in BERT paper:
+* Batch size:16, 32
+* Learning Rate (Adam): 5e-5, 3e-5, 2e-5
+* Number of epochs: 2, 3, 4
+I found that for batch size 16, learning rate 2e-5 and 3 epochs I got the best results.
+
+Some results:
+
+![image](https://user-images.githubusercontent.com/60042402/167922374-70465e33-4573-4a00-8fbf-6fd90fe037d9.png)
+
+### Results Summary 
+![image](https://user-images.githubusercontent.com/60042402/167922140-0ec37f54-5e78-4b25-abef-396362e45dec.png)
+
+
