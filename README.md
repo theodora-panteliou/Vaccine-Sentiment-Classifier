@@ -22,6 +22,7 @@ The dataset contains tweets about vaccines that are labeled 0 for neutral, 1 for
 I experimented with various parameters and ways of preprocessing. 
 * Sequence lentgh: The RNNs take input in the form of [batch_size, sequence_length, input_size]. My first approach was to set a default sequence length and truncate or pad sequences to match that length. The second approach, which I tried aiming to get better scores was to create batches with variable sequnce length using BucketIterator. BucketIterator groups texts based on legth so that it minimizes padding. 
 * Skip Connections: I implemented in a seperate class (for each sequence leght approach) RNN with skip connections based on the following structure.
+
 ![image](https://user-images.githubusercontent.com/60042402/167860747-bcb57f8d-d4ea-49c9-b599-94f7afdbc356.png)
 
 For Hyperparameter Tuning I experimented with the following parameters:
